@@ -16,6 +16,7 @@ import {
 import TrackPlayer from "react-native-track-player";
 import { useIsPlaying, useProgress } from "react-native-track-player";
 import { db } from "../../lib/db";
+import { getPlayerAvailable } from "../../lib/trackPlayer";
 import { usePlayerStore } from "../../store/player";
 
 function formatTime(seconds: number): string {
@@ -107,6 +108,20 @@ export default function PlayerScreen() {
     usePlayerStore.setState({
       currentTrack: { ...currentTrack, originalBpm: parsed },
     });
+  }
+
+  if (!getPlayerAvailable()) {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.errorText}>Audio playback not available</Text>
+        <Text style={[styles.errorText, { fontSize: 14, color: "#666", marginTop: 8 }]}>
+          Requires a dev build — not supported in Expo Go
+        </Text>
+        <Pressable onPress={() => router.back()}>
+          <Text style={styles.backText}>Go back</Text>
+        </Pressable>
+      </View>
+    );
   }
 
   if (loading) {
