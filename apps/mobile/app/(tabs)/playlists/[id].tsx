@@ -1,4 +1,4 @@
-import type { Track } from "@marko/types";
+import type { Track } from "@markku/types";
 import { useAuth } from "@clerk/clerk-expo";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useCallback, useEffect, useState } from "react";

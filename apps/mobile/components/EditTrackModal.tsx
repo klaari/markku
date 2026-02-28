@@ -1,4 +1,4 @@
-import type { Track } from "@marko/types";
+import type { Track } from "@markku/types";
 import { useEffect, useState } from "react";
 import {
   ActivityIndicator,

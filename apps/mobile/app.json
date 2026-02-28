@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "Marko Player",
-    "slug": "marko-player",
+    "name": "Markku Player",
+    "slug": "markku-player",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
-    "scheme": "marko-player",
+    "scheme": "markku-player",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
@@ -15,7 +15,7 @@
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.marko.player",
+      "bundleIdentifier": "com.markku.player",
       "infoPlist": {
         "UIBackgroundModes": ["audio"]
       }
@@ -25,7 +25,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#000000"
       },
-      "package": "com.marko.player",
+      "package": "com.markku.player",
       "edgeToEdgeEnabled": true
     },
     "plugins": [

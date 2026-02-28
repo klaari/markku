@@ -1,7 +1,7 @@
-# Marko Player — Phase 1 Feature Spec
+# Markku Player — Phase 1 Feature Spec
 
 ## Overview
-Marko Player is a personal mobile music player. Single user. The goal is a
+Markku Player is a personal mobile music player. Single user. The goal is a
 fast, focused player where the core feature is creating playlists and adjusting tempo/pitch together
 with live BPM feedback — useful for planning dj sets.
 
@@ -170,7 +170,7 @@ updatedAt     timestamp DEFAULT now()
 
 ## Cloudflare R2
 
-- Bucket name: `marko-player`
+- Bucket name: `markku-player`
 - Object key pattern: `{userId}/{trackId}.{ext}`
 - Upload: presigned PUT URL generated client-side (Phase 1)
 - Download/stream: presigned GET URL, expires in 1 hour

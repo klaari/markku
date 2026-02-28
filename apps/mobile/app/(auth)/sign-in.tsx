@@ -54,7 +54,7 @@ export default function SignInScreen() {
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
       <View style={styles.inner}>
-        <Text style={styles.title}>Marko Player</Text>
+        <Text style={styles.title}>Markku Player</Text>
         <Text style={styles.subtitle}>Sign in to continue</Text>
 
         {error ? <Text style={styles.error}>{error}</Text> : null}

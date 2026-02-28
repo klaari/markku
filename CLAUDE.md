@@ -1,9 +1,9 @@
-# Marko Player — Claude Code Context
+# Markku Player — Claude Code Context
 
 ## What This App Is
 A personal mobile music player with tempo/pitch control, live BPM display,
 playlist management, and cloud backup. Built for personal use by a single user.
-Named: Marko Player.
+Named: Markku Player.
 
 ## Stack
 - **Mobile:** Expo (SDK 52+) + Expo Router (file-based routing)
@@ -18,7 +18,7 @@ Named: Marko Player.
 
 ## Monorepo Structure
 ```
-marko-player/
+markku-player/
 ├── apps/
 │   └── mobile/               → Expo app
 │       ├── app/              → Expo Router file-based routes

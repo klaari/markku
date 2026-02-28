@@ -1,4 +1,4 @@
-import { createDb } from "@marko/db";
+import { createDb } from "@markku/db";
 
 const databaseUrl = process.env.EXPO_PUBLIC_DATABASE_URL!;
 

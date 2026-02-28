@@ -1,5 +1,5 @@
-import { tracks } from "@marko/db";
-import type { Track } from "@marko/types";
+import { tracks } from "@markku/db";
+import type { Track } from "@markku/types";
 import { eq, and, asc, desc } from "drizzle-orm";
 import { create } from "zustand";
 import { db } from "../lib/db";
