@@ -1,0 +1,50 @@
+import { Hono } from "hono";
+import { cors } from "hono/cors";
+import { logger } from "hono/logger";
+import { env } from "./lib/env";
+import { healthRoute } from "./routes/health";
+import { downloadRoute } from "./routes/download";
+import { handleWsOpen, handleWsClose, handleWsMessage } from "./ws/handler";
+import { initProcessor, recoverStaleJobs } from "./jobs/processor";
+
+// Initialize job processor before starting server
+initProcessor();
+
+const app = new Hono();
+
+app.use("*", logger());
+app.use("*", cors());
+
+app.route("/", healthRoute);
+app.route("/", downloadRoute);
+
+const server = Bun.serve({
+  port: env.port,
+  fetch(req, server) {
+    const url = new URL(req.url);
+
+    if (url.pathname === "/ws") {
+      const token = url.searchParams.get("token");
+      if (!token) {
+        return new Response("Missing token", { status: 401 });
+      }
+      const upgraded = server.upgrade(req, { data: { token } });
+      if (upgraded) return undefined;
+      return new Response("WebSocket upgrade failed", { status: 500 });
+    }
+
+    return app.fetch(req, { ip: server.requestIP(req) });
+  },
+  websocket: {
+    open: handleWsOpen,
+    close: handleWsClose,
+    message: handleWsMessage,
+  },
+});
+
+console.log(`Markku API running on port ${server.port}`);
+
+// Recover jobs that were in-progress when server last stopped
+recoverStaleJobs().catch((err) => {
+  console.error("[startup] Failed to recover stale jobs:", err);
+});
