@@ -1,5 +1,5 @@
 {
-  "name": "markku",
+  "name": "metropol",
   "private": true,
   "scripts": {
     "dev": "turbo run dev",

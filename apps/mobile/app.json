@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "Markku Player",
-    "slug": "markku-player",
+    "name": "Metropol Player",
+    "slug": "metropol-player",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
-    "scheme": "markku-player",
+    "scheme": "metropol-player",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
@@ -15,7 +15,7 @@
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.markku.player",
+      "bundleIdentifier": "com.metropol.player",
       "infoPlist": {
         "UIBackgroundModes": ["audio"]
       }
@@ -25,7 +25,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#000000"
       },
-      "package": "com.markku.player",
+      "package": "com.metropol.player",
       "edgeToEdgeEnabled": true
     },
     "plugins": [
