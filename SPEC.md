@@ -1,7 +1,7 @@
-# Markku Player — Phase 1 Feature Spec
+# Metropol Player — Phase 1 Feature Spec
 
 ## Overview
-Markku Player is a personal mobile music player. Single user. The goal is a
+Metropol Player is a personal mobile music player. Single user. The goal is a
 fast, focused player where the core feature is creating playlists and adjusting tempo/pitch together
 with live BPM feedback — useful for planning dj sets.
 
@@ -170,7 +170,7 @@ updatedAt     timestamp DEFAULT now()
 
 ## Cloudflare R2
 
-- Bucket name: `markku-player`
+- Bucket name: `metropol-player`
 - Object key pattern: `{userId}/{trackId}.{ext}`
 - Upload: presigned PUT URL generated client-side (Phase 1)
 - Download/stream: presigned GET URL, expires in 1 hour
