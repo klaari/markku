@@ -30,8 +30,17 @@
     },
     "plugins": [
       "expo-router",
-      "expo-secure-store"
+      "expo-secure-store",
+      "expo-updates"
     ],
+    "updates": {
+      "url": "https://u.expo.dev/54cc1881-9fb9-4c79-87d4-afa510f09a57",
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
     "extra": {
       "eas": {
         "projectId": "54cc1881-9fb9-4c79-87d4-afa510f09a57"
