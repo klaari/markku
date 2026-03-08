@@ -38,7 +38,7 @@ export interface DownloadResult {
 }
 
 export async function downloadAudio(url: string): Promise<DownloadResult> {
-  const dir = await mkdtemp(join(tmpdir(), "markku-"));
+  const dir = await mkdtemp(join(tmpdir(), "metropol-"));
   const output = join(dir, "audio.%(ext)s");
 
   const proc = Bun.spawn(

@@ -14,7 +14,7 @@ COPY packages/db/ packages/db/
 COPY packages/types/ packages/types/
 COPY apps/api/ apps/api/
 
-RUN mkdir -p /tmp/markku-downloads
+RUN mkdir -p /tmp/metropol-downloads
 
 EXPOSE 3000
 
